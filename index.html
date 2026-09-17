@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#faf9f6">
+  <title>Читаем по слогам</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <button id="homeBtn" class="icon" aria-label="Главная">⌂</button>
+      <div class="progress"><span id="progressBar"></span></div>
+      <button id="parentBtn" class="icon" aria-label="Для родителя">⚙</button>
+    </header>
+
+    <section id="childScreen" class="screen">
+      <div id="stageLabel" class="stage-label"></div>
+      <div id="lesson" class="lesson"></div>
+      <div id="picture" class="picture hidden"></div>
+      <div class="actions">
+        <button id="helpBtn" class="secondary">🔊 Помоги прочитать</button>
+        <button id="readBtn" class="primary">✓ Прочитал сам</button>
+      </div>
+      <button id="nextBtn" class="next hidden">Следующее →</button>
+    </section>
+
+    <section id="parentScreen" class="screen hidden parent">
+      <h1>Для родителя</h1>
+      <p>Одна траектория: <b>звук → слияние → слог → слово → фраза</b>.</p>
+      <div id="stats" class="stats"></div>
+      <h2>Уровень</h2>
+      <select id="levelSelect"></select>
+      <button id="resetBtn" class="secondary wide">Сбросить прогресс</button>
+      <button id="backBtn" class="primary wide">Вернуться к чтению</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
